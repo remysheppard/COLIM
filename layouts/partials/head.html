@@ -1,0 +1,14 @@
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{ $styles := resources.Get "css/main.css" }}
+{{ $styles = $styles | resources.PostCSS }}
+
+{{ if  hugo.IsProduction  }}
+  {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+{{ else if .Site.IsServer }}
+  {{ $styles = $styles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) .}}
+{{ end }}
+
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
