@@ -1,5 +1,13 @@
 {{ define "main" }}
 	
 	{{ partial "hero" . }}
-	
+
+	{{ partial "gallery" . }}
+
+	<section class="md:container md:mx-auto lg:px-10">
+		<h2>{{ .Title }}</h2>
+
+			{{ .Content }}
+
+	</section>
 {{ end }}

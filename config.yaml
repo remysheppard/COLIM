@@ -1,3 +1,21 @@
 baseURL: https://colim.netlify.app
 languageCode: en-us
 title: Central Ohio Lutheran Immigrant Mission
+
+menu:
+  main:
+  - name: facebook
+    url: '#'
+    weight: 2
+
+  - name: youtube
+    url: '#'
+    weight: 1
+
+  - name: instagram
+    url: '#'
+    weight: 3
+
+  - name: twitter
+    url: '#'
+    weight: 4
