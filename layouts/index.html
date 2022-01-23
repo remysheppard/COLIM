@@ -4,10 +4,12 @@
 
 	{{ partial "gallery" . }}
 
-	<section class="md:container md:mx-auto lg:px-10">
-		<h2>{{ .Title }}</h2>
+	<section class="md:container md:mx-auto">
+		<h2 class="text-center text-4xl">{{ .Title }}</h2>
 
+		<div class="md:w-2/3 text-lg lg:text-xl mx-auto mt-4 space-y-4 leading-5">
 			{{ .Content }}
+		</div>
 
 	</section>
 {{ end }}

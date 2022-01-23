@@ -1,3 +1,19 @@
-<footer class="bg-gray-900">
-    <div class="flex justify-center text-white py-1">This is the footer</div>
+{{ $image := (resources.Get "images/colim-logo.png").Resize "100x webp q85" }}
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <img src="{{ $image.RelPermalink }}" height="{{ div $image.Height 2 }}" width="{{ div $image.Width 2 }}">
+      <span class="ml-3 text-xl">Central Ohio Lutheran Immigrant Mission</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"><i class="fa-thin fa-copyright fa-fw"></i> {{ now.Format "2006" }} Central Ohio Lutheran Immigrant Mission —
+      Built by <a href="https://www.hyperdrivecodes.com" class="text-gray-600 ml-1" target="_blank">Hyperdrive Website Development</a>.
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      {{ range .Site.Menus.main }}
+        <a class="ml-3 text-gray-500" href="{{ .URL }}">
+          <i class="fab fa-{{ .Name }} fa-fw"></i>
+        </a>
+      {{ end }}
+    </span>
+  </div>
 </footer>
