@@ -17,3 +17,7 @@
     </span>
   </div>
 </footer>
+
+<script type="text/javascript">
+  {{ with (resources.Get "js/common.js") }}{{ .Content | safeJS }}{{ end }}
+</script>
