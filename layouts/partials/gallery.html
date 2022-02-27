@@ -6,17 +6,18 @@
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">See What We're Up To</h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">These images were taken at Ebenezer Lutheran Church in Whitehall, Ohio. We hope they give you a sense of what we're up to with the Central Ohio Lutheran Immigrant Mission!</p>
     </div>
-
-
-        <div class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              {{- range resources.Match "images/gallery/*" -}}
-                <li class="splide__slide"><img class="rounded shadow-md" src="{{- (.Fill "1000x667 smart webp q75").RelPermalink -}}"></li>
-              {{- end -}}
-            </ul>
-          </div>
-        </div>
+    
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {{- range resources.Match "images/gallery/*" -}}
+            <li class="splide__slide shadow-md mx-4">
+              <img class="rounded" src="{{- (.Fill "1000x667 smart webp q75").RelPermalink -}}">
+            </li>
+          {{- end -}}
+        </ul>
+      </div>
+    </div>
 
   </div>
 </section>
