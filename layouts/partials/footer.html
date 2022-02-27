@@ -19,5 +19,5 @@
 </footer>
 
 <script type="text/javascript">
-  {{ with (resources.Get "js/common.js") }}{{ .Content | safeJS }}{{ end }}
+  {{- with (resources.Get "js/common.js") -}}{{- .Content | safeJS -}}{{- end -}}{{- with (resources.Get "js/splide.min.js") -}}{{- .Content | safeJS -}}{{- end -}}
 </script>

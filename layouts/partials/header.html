@@ -1,13 +1,13 @@
 {{ $logo := (resources.Get "images/colim-logo.png").Resize "500x webp q85" }}
 <header>
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-    	{{ range .Site.Menus.main }}
+  <div class="container mx-auto flex flex-wrap justify-between p-5 flex-col md:flex-row items-center">
+    {{/*<nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+    	- range .Site.Menus.main -
 	      <a class="mr-5 hover:text-amber-800 text-amber-700" href="{{ .URL }}">
 	      	<i class="fab fa-{{ .Name }} fa-fw fa-3x"></i>
 	      </a>
-	    {{ end }}
-    </nav>
+	    - end -
+    </nav>*/}}
     <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0" href="{{ .Site.BaseURL }}">
       <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" description="The Central Ohio Lutheran Immigrant Mission Logo is a Crown of Thorns encircling a Dove, which itself has a cross at it's heart, and the organization's name ringing around it." width="{{ div $logo.Width 2 }}" height="{{ div $logo.Height 2 }}">
     </a>
