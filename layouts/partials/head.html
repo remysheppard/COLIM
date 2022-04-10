@@ -7,12 +7,12 @@
 {{ $styles := resources.Get "css/main.css" }}
 {{ $styles = $styles | resources.PostCSS }}
 
-{{ if  hugo.IsProduction  }}
-  {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
-{{ else if .Site.IsServer }}
-  {{ $styles = $styles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) .}}
+<!-- // { Styling } -->
+{{ $css := resources.Get "css/main.css" | minify }}
+{{ with $css }}
+  <style type="text/css">
+    {{ .Content | safeCSS }}
+  </style>
 {{ end }}
-
-<style type="text/css">{{- $styles.Content | safeCSS -}}</style>
 
 <script src="https://kit.fontawesome.com/f249b616c7.js" crossorigin="anonymous"></script>
