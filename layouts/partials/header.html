@@ -1,17 +1,19 @@
 {{ $logo := (resources.Get "images/colim-logo.png").Resize "500x webp q85" }}
 <header>
   <div class="container mx-auto flex flex-wrap justify-between p-5 flex-col md:flex-row items-center">
-    {{/*<nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-    	- range .Site.Menus.main -
-	      <a class="mr-5 hover:text-amber-800 text-amber-700" href="{{ .URL }}">
-	      	<i class="fab fa-{{ .Name }} fa-fw fa-3x"></i>
-	      </a>
-	    - end -
-    </nav>*/}}
     <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0" href="{{ .Site.BaseURL }}">
       <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" description="The Central Ohio Lutheran Immigrant Mission Logo is a Crown of Thorns encircling a Dove, which itself has a cross at it's heart, and the organization's name ringing around it." width="{{ div $logo.Width 2 }}" height="{{ div $logo.Height 2 }}">
     </a>
-    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+    
+    <nav class="flex lg:w-2/5 flex-wrap text-xl text-center my-8">
+      {{- range .Site.Menus.main -}}
+        <a class="bg-orange-200 mx-2 px-2 py-3 rounded shadow hover:shadow-md hober:bg-orange-300 hover:text-amber-800 text-amber-700" href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      {{- end -}}
+    </nav>
+
+    <div class="lg:w-2/5 inline-flex lg:justify-end">
       <a href="https://www.hopelutheransunbury.org/missions-support.html" target="_blank" class="inline-flex items-center bg-amber-400 text-slate-700 shadow hover:shadow-lg border-0 py-4 px-6 text-3xl focus:outline-none hover:bg-orange-400 rounded mt-4 md:mt-0">
       	Support Us&nbsp;&nbsp;<i class="fa-duotone fa-gift"></i>
       </a>

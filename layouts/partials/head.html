@@ -13,9 +13,6 @@
   {{ $styles = $styles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) .}}
 {{ end }}
 
-{{ $splide := resources.Get "css/splide.min.css" }}
-{{ $splideStyle := resources.Get "css/splide-default.min.css" }}
-
-<style type="text/css">{{- $styles.Content | safeCSS -}}{{- $splide.Content | safeCSS -}}{{- $splideStyle.Content | safeCSS -}}</style>
+<style type="text/css">{{- $styles.Content | safeCSS -}}</style>
 
 <script src="https://kit.fontawesome.com/f249b616c7.js" crossorigin="anonymous"></script>

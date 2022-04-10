@@ -4,18 +4,19 @@ title: Central Ohio Lutheran Immigrant Mission
 
 menu:
   main:
-  - name: facebook
-    url: '#'
-    weight: 2
-
-  - name: youtube
-    url: '#'
+  - name: Home
+    url: '/'
     weight: 1
 
-  - name: instagram
-    url: '#'
+  - name: F.A.Q.
+    url: '/faq/'
+    weight: 2
+
+  - name: Gallery
+    url: '/gallery/'
     weight: 3
 
-  - name: twitter
-    url: '#'
-    weight: 4
+
+  social:
+  - name: youtube
+    url: https://www.youtube.com/channel/UCP5ugWoXbwz1ccd-AisWz4Q
