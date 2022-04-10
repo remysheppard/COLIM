@@ -4,11 +4,8 @@
 
 <title>{{ .Site.Title }}</title>
 
-{{ $styles := resources.Get "css/main.css" }}
-{{ $styles = $styles | resources.PostCSS }}
-
 <!-- // { Styling } -->
-{{ $css := resources.Get "css/main.css" | minify }}
+{{ $css := resources.Get "main.css" | minify }}
 {{ with $css }}
   <style type="text/css">
     {{ .Content | safeCSS }}
