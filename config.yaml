@@ -8,14 +8,17 @@ menu:
     url: '/'
     weight: 1
 
+  - name: Newsletters
+    url: '/newsletters/'
+    weight: 2
+
   - name: F.A.Q.
     url: '/faq/'
-    weight: 2
+    weight: 3
 
   - name: Gallery
     url: '/gallery/'
-    weight: 3
-
+    weight: 4
 
   social:
   - name: youtube
