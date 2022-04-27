@@ -10,7 +10,7 @@ Trained visitation teams are ready and willing to come to your congregation and 
 
 Teams are prepared to travel throughout the state of Ohio to give these presentations, however if you are out of the area, but would like a virtual presentation, we’ll make arrangements for that as well!
 
-If you are interested in hosting a team, please contact Deaconess Janet Nicol at [janet.nicol@stpaulchuckery.church](mailto:janet.nicol@stpaulchuckery.church?subject=Hosting Colim Team). 
+If you are interested in hosting a team, please contact Deaconess Janet Nicol at [janet.nicol@stpaulchuckery.church](mailto:janet.nicol@stpaulchuckery.church?subject=Hosting+Colim+Team). 
 
 ## National Youth Gathering
 
@@ -22,9 +22,9 @@ We give thanks to God for the funds we have been able to raise thus far, but the
 
 **Monthly Expenses:** $10,473.05
 
-**Yearly Budget:** $18,410.46
+**Yearly Budget:** $126,000.00
 
-**Raised for this fiscal year:** $126,000.00
+**Raised for this fiscal year:** $18,410.46
 
 *Note that Ebenezer Ethiopian has pledged to pay for the health benefits and will contributing each month.*
 

@@ -8,17 +8,21 @@ menu:
     url: '/'
     weight: 1
 
+  - name: Prayer
+    url: '/prayer-requests/'
+    weight: 2
+
   - name: Newsletters
     url: '/newsletters/'
-    weight: 2
+    weight: 3
 
   - name: F.A.Q.
     url: '/faq/'
-    weight: 3
+    weight: 4
 
   - name: Gallery
     url: '/gallery/'
-    weight: 4
+    weight: 5
 
   social:
   - name: youtube
